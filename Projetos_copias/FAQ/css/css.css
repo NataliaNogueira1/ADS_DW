@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@900&display=swap');
+.akatab-black {
+    font-family: "Akatab", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+body{
+    background-color: #faeeff;
+}
+.back{
+    display: flex;
+    width: 101.25%;
+    height: 17rem;
+    margin-left: -8px;
+    margin-top: -17px;
+}
+
+.forma{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    width: 41%;
+    height: fit-content;
+    margin-left:28%;
+    margin-bottom: 7%;
+    margin-top: -10%;
+}
+    .estrela{
+        margin-top: 40%;
+        margin-left: 35%;
+        width: 33%;
+    }
+    .title1{
+        font-size: 2.7rem;
+        margin-left: 88%;
+        font-family: "Akatab", sans-serif;
+        font-weight: 500;
+        font-style: bold;
+        margin-top: -50%;
+        color: #301734;
+    }
+
+    #img1, #img2, #img3, #img4{
+        width: 4.5%;
+        margin-left: 87%;
+        margin-top: -4%;
+        display: flex;
+
+    }
+    
+    .container1{
+        margin-top: 27%;
+    }
+
+    .container1, .container2, .container3{
+        margin-left: -10%;
+    }
+    
+    hr{
+        display: flex;
+        border-color: rgba(255, 255, 255, 0.315);
+        margin-left: -10%;
+        margin-top: -3%;
+        width: 100%;
+    }
+
+    .container4{
+        margin-left: -10%;
+    }
+    
+    .title2{
+        margin-bottom: 10px;
+        margin-top: 4%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 97%;
+        color: #39323d;
+    }
+    
+    .title2:hover{
+        cursor: pointer;
+    }
+    
+    #expande1{
+        transition: 1s;
+    }
+    
+    .expande{
+        overflow: hidden;
+        height: 0;
+        transition: 1s;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 93%;
+        color: #a4a2a4;
+        margin-top: 4%;
+        margin-left: 0%;
+        margin-right: 5%;
+    }
+    
+    .exp{
+        height: fit-content;
+        transition: 1s;
+        
+        margin-bottom: 7%;
+    }

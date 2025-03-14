@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Radley&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@font-face{
+    font-family: minhaFonte;
+    src: url(cs_b.ttf);
+  }
+
+body{
+    background-color: #f3e5d8;
+}
+
+.forma{
+    background-color: white;
+    border-radius: 11px;
+    width: 55%;
+    height: 80%;
+    margin-left:24%;
+    margin-bottom: 7%;
+    margin-top: 7%;
+}
+
+    .ft{
+        border-radius: 6px;
+        width: 90%;
+        height: 260px;
+        margin: 5% 5% 0 5%;
+    }
+
+    .title1{
+        font-size: 140%;
+        margin-left: 5%;
+        font-family: "Radley", serif;
+        font-weight: 500;
+        font-style: bold;
+        margin-top: -0.9%;
+    }
+
+    .txt1{
+        margin-left: 5%;
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        margin-right: 5%;
+        font-size: 80%;
+        margin-top: -1.5%;
+    }
+    /* Caixa vermelha - Tempo de preparação */
+    .red{
+        background-color: #fff8fc;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 15px;
+        margin-top: 5%;
+        height: 170px;
+    }
+        .title2{
+            font-size: 120%;
+            margin-left: 5%;
+            padding-top: 4%;
+            font-family: minhaFonte;
+            font-weight: 600;
+            color: #903759;
+        }
+        .txt2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        ul {
+            list-style: none;
+          }
+          
+          ul .li1:before {
+            content: '\2022';
+            margin-right: 27px;
+            margin-left: 15px;
+            color: #903759; /* cor da bolinha */
+           }
+           .li1{
+            color:#4a4848;
+            margin-left: -5%;
+            padding-bottom: 12px;
+           }
+    
+    /* Ingredientes */
+    .title3{
+        font-size: 100%;
+        margin-left: 5.2%;
+        font-family: "Radley", serif;
+        font-weight: 500;
+        font-style: bold;
+        color: #7d483b;
+    }
+    .txt3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: black;
+    }
+        .li2{
+            color:#4a4848;
+            margin-left: -3%;
+            padding-bottom: 12px;
+        }
+            .li2:before {
+                content: '\2022';
+                margin-right: 27px;
+                margin-left: 15px;
+                color: #7d483b; /* cor da bolinha */
+            }
+    /* Instruções */
+    .title4{
+        font-size: 100%;
+        margin-left: 5%;
+        font-family: "Radley", serif;
+        font-weight: 500;
+        font-style: bold;
+        color: #7d483b;
+    }
+    .txt4{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        padding-right: 0%;
+        color: #4a4848;
+        margin: 0 5%;
+    }
+        .li3{
+            margin-left: -3%;
+            padding-bottom: 12px;
+            line-height: 1.5rem;
+            list-style-position: outside;
+            padding-left: 17px;
+        }
+            .li3::marker{
+                color:#7d483b;
+                font-weight: 700;
+            }
+    /* Valores nutricionais */
+    .title5{
+        font-size: 100%;
+        margin-left: 5%;
+        font-family: "Radley", serif;
+        font-weight: 500;
+        font-style: bold;
+        color: #7d483b;
+    }
+    .txt5{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4a4848;
+        margin: 0 5%;
+    }
+    hr{ /*Linha*/
+        margin-left: 5%;
+        margin-right: 5%;
+        border-color: white;
+    }
+    .txt6{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4a4848;
+        margin-left: 10%;
+        margin-top: 4%;
+        margin-bottom: 8px;
+    }
+    .txt7{
+        font-family: Arial, Helvetica, sans-serif;
+        color:#7d483b;
+        font-weight: 700;
+        margin-left: 50%;
+        margin-top: -4%;
+        margin-bottom: 11px;
+    }
+    .txt8{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4a4848;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 8px;
+    }
+    .txt9{
+        font-family: Arial, Helvetica, sans-serif;
+        color:#7d483b;
+        font-weight: 700;
+        margin-left: 50%;
+        margin-top: -4%;
+        margin-bottom: 13px;
+    }
+    .txt10{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4a4848;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 8px;
+    }
+    .txt11{
+        font-family: Arial, Helvetica, sans-serif;
+        color:#7d483b;
+        font-weight: 700;
+        margin-left: 50%;
+        margin-top: -4%;
+        padding-bottom: 5.5%;
+    }
