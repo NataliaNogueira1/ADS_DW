@@ -55,19 +55,19 @@ body{
     }
 
     .container1, .container2, .container3{
-        margin-left: -10%;
+        margin-left: -15%;
     }
     
     hr{
         display: flex;
         border-color: rgba(255, 255, 255, 0.315);
-        margin-left: -10%;
+        margin-left: -15%;
         margin-top: -3%;
-        width: 100%;
+        width: 105%;
     }
 
     .container4{
-        margin-left: -10%;
+        margin-left: -15%;
     }
     
     .title2{
