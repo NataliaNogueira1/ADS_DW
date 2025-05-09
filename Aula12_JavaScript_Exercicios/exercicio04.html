@@ -1,0 +1,60 @@
+<!-- 3. **Contar de 1 até 100 (ou até N)**
+    - Exiba todos os números de 1 até 100 (ou um número digitado pelo usuário). -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Contador</h1>
+    <label for="numero">Digite um número para eu contar até (se vc quiser)</label>
+    <input type="text" id="numero" placeholder="Digite um número" /><br><br>
+    
+    <button onclick="contador()">Gerar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+    function contador() {
+        const num = parseInt(document.getElementById("numero").value);
+        const resultado = document.getElementById("resultado");
+
+        if (isNaN(num)) {
+            for (var i = 1; i < 101; i++) {
+                resultado.innerHTML += `${i}<br>`;
+            }
+        }else if (1 >= num){
+            resultado.textContent = "Por favor, digite um número válido.";
+        }else{
+            for (var i = 1; i < num+1; i++) {
+                resultado.innerHTML += `${i}<br>`;
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
+

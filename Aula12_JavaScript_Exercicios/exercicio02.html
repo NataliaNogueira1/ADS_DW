@@ -1,0 +1,68 @@
+<!-- 1. **Calcular a média de 3 notas**
+    - Peça 3 notas, calcule a média e diga se o aluno foi aprovado (média ≥ 6). -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcular a média</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .form{
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calcular a média</h1>
+  <label for="nota1">Nota 1:</label>
+    <input type="text" id="numero1" placeholder="Digite um número" /><br><br>
+   <label for="nota2">Nota 2:</label>
+    <input type="text" id="numero2" placeholder="Digite um número" /><br><br>
+   <label for="nota3">Nota 3:</label>
+    <input type="text" id="numero3" placeholder="Digite um número" /><br><br>
+    
+   <button onclick="media()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function media() {
+      const n1 = parseInt(document.getElementById("numero1").value);
+      const n2 = parseInt(document.getElementById("numero2").value);
+      const n3 = parseInt(document.getElementById("numero3").value);
+      let media = 0;
+      const resultado = document.getElementById("resultado");
+
+      media = (n1 + n2 + n3) / 3;
+
+      if (isNaN(n1) || isNaN(n2) || isNaN(n3) || media > 11) {
+        resultado.textContent = "Por favor, digite um número válido.";
+        return;
+      }
+
+      if (media >= 6) {
+        resultado.textContent = `Aluno aprovado com a média ${media.toFixed(2)}`;
+      } else {
+        resultado.textContent = `Aluno reprovado com a média ${media.toFixed(2)}`;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
