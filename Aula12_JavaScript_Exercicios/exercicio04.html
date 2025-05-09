@@ -29,8 +29,13 @@
 <body>
 
     <h1>Contador</h1>
-    <label for="numero">Digite um número para eu contar até (se vc quiser)</label>
-    <input type="text" id="numero" placeholder="Digite um número" /><br><br>
+    <p>Você quer:</p>
+    <label for="numero">Que eu conte até 100</label>
+        <input type="radio" name="numero" id="op1" value="s"/><br><br>
+    <label for="numero">Que eu conte até o seu número</label>
+        <input type="radio" name="numero" id="op2" value="n"/><br><br>
+    <label for="numero">Seu número:</label>
+        <input type="text" id="numeropessoa" placeholder="Digite um número"/><br><br>
     
     <button onclick="contador()">Gerar</button>
 
@@ -38,19 +43,22 @@
 
     <script>
     function contador() {
-        const num = parseInt(document.getElementById("numero").value);
+        const num = parseInt(document.getElementsByName("numero").value);
+        const op1 = document.getElementById('op1').disabled = false;
+        const op2 = document.getElementById('op2').disabled = false;
+        const nump = parseInt(document.getElementById("numeropessoa").value);
         const resultado = document.getElementById("resultado");
 
-        if (isNaN(num)) {
+        if (op1 == true) {
             for (var i = 1; i < 101; i++) {
                 resultado.innerHTML += `${i}<br>`;
             }
-        }else if (1 >= num){
-            resultado.textContent = "Por favor, digite um número válido.";
-        }else{
-            for (var i = 1; i < num+1; i++) {
+        }else if (op2 == true){
+            for (var i = 1; i < nump+1; i++) {
                 resultado.innerHTML += `${i}<br>`;
             }
+        }else{
+            resultado.textContent = "Por favor, digite um número válido.";
         }
     }
     </script>
