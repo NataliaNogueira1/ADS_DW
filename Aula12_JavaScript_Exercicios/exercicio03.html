@@ -1,11 +1,11 @@
-<!-- 2. **Tabuada de um número**
-    - Solicite um número e mostre a tabuada de 1 a 10 no console. -->
+<!-- 3. **Contar de 1 até 100 (ou até N)**
+    - Exiba todos os números de 1 até 100 (ou um número digitado pelo usuário). -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Tabuada</title>
+    <title>Contador</title>
     <style>
     body {
         font-family: Arial, sans-serif;
@@ -28,27 +28,42 @@
 </head>
 <body>
 
-    <h1>Tabuada</h1>
-    <label for="numero">Você quer a tabuada de qual número?</label>
-    <input type="text" id="numero" placeholder="Digite um número" /><br><br>
+    <h1>Contador</h1>
+    <p>Você quer:</p>
+    <label for="op1">Que eu conte até 100</label>
+        <input type="radio" name="numero" id="op1"/><br><br>
+    <label for="op2">Que eu conte até o seu número</label>
+        <input type="radio" name="numero" id="op2"/><br><br>
+    <label for="numeropessoa">Seu número:</label>
+        <input type="text" id="numeropessoa" placeholder="Digite um número"/><br><br>
     
-    <button onclick="tabuada()">Gerar</button>
+    <button onclick="contador()">Gerar</button>
 
     <div id="resultado"></div>
 
     <script>
-    function tabuada() {
-        const num = parseInt(document.getElementById("numero").value);
+    function contador() {
+        const op1 = document.getElementById('op1').checked;
+        const op2 = document.getElementById('op2').checked;
+        const nump = parseInt(document.getElementById("numeropessoa").value);
         const resultado = document.getElementById("resultado");
 
-        if (isNaN(num)) {
-            resultado.textContent = "Por favor, digite um número válido.";
-            return;
-        }
+        resultado.innerHTML = "";
 
-        for (var i = 0; i < 11; i++) {
-            let multiplicacao = num * i;
-            resultado.innerHTML += `${num} X ${i} = ${multiplicacao}<br>`;
+        if (op1) {
+            for (var i = 1; i < 101; i++) {
+                resultado.innerHTML += `${i}<br>`;
+            }
+        }else if (op2) {
+            if (isNaN(nump) || nump <= 0){
+                resultado.innerHTML = `Agora insira o número (maior que 0)`;
+            }else{
+                for (var i = 1; i < nump+1; i++) {
+                resultado.innerHTML += `${i}<br>`;
+                }
+            }
+        }else{
+            resultado.textContent = "Por favor, digite um número válido.";
         }
     }
     </script>

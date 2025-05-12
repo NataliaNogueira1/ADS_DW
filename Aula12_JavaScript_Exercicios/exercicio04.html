@@ -1,5 +1,5 @@
-<!-- 3. **Contar de 1 até 100 (ou até N)**
-    - Exiba todos os números de 1 até 100 (ou um número digitado pelo usuário). -->
+<!-- 4. **Somar números até o usuário digitar 0**
+    - Continue pedindo números e somando até que o usuário digite 0. Mostre o total. -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -28,41 +28,31 @@
 </head>
 <body>
 
-    <h1>Contador</h1>
-    <p>Você quer:</p>
-    <label for="numero">Que eu conte até 100</label>
-        <input type="radio" name="numero" id="op1"/><br><br>
-    <label for="numero">Que eu conte até o seu número</label>
-        <input type="radio" name="numero" id="op2"/><br><br>
-    <label for="numero">Seu número:</label>
-        <input type="text" id="numeropessoa" placeholder="Digite um número"/><br><br>
+    <h1>Somando números até você digitar 0</h1>
+    <label for="numero">Número:</label>
+        <input type="text" id="numero" placeholder="Digite um número"/><br><br>
     
-    <button onclick="contador()">Gerar</button>
+    <button onclick="contador()">Adicionar</button>
 
     <div id="resultado"></div>
 
     <script>
+    let soma = 0; 
     function contador() {
-        const op1 = document.getElementById('op1').checked;
-        const op2 = document.getElementById('op2').checked;
-        const nump = parseInt(document.getElementById("numeropessoa").value);
+        const num = parseInt(document.getElementById("numero").value);
         const resultado = document.getElementById("resultado");
 
-        if (op1) {
-            for (var i = 1; i < 101; i++) {
-                resultado.innerHTML += `${i}<br>`;
-            }
-        }else if (op2) {
-            if (isNaN(nump) || nump > 0){
-                resultado.innerHTML = `Agora insira o número (maior que 0)`;
-            }else{
-                for (var i = 1; i < nump+1; i++) {
-                resultado.innerHTML += `${i}<br>`;
-                }
-            }
-        }else{
-            resultado.textContent = "Por favor, digite um número válido.";
+        resultado.innerHTML = "";
+
+        do{
+            resultado.innerHTML = num;
+            soma = soma + num;
         }
+        while (num != 0) {
+            resultado.innerHTML = `Soma dos números: ${soma}`;
+            return;
+        }
+            
     }
     </script>
 
