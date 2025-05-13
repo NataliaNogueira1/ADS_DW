@@ -1,0 +1,61 @@
+<!-- 6. **Encontrar o maior número de uma lista**
+    - Dada uma lista de números, encontre e exiba o maior. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparador</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Encontrar o maior número</h1>
+    <label for="limite">Quantos números você quer inserir?</label>
+        <input type="number" id="limite" placeholder="Digite um número"/><br><br>
+    
+    <button onclick="comparador()">Analisar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        function comparador() {
+            var maior = 0;
+            const limite = parseInt(document.getElementById("limite").value);
+            const resultado = document.getElementById("resultado");
+
+            for (var i=0; i < limite; i++){
+                const number = prompt("Número:");
+                const num = parseInt(number);
+
+                if (num > maior){
+                    maior = num;
+                }
+            }
+            resultado.innerHTML = "O maior número é: " + maior;
+            return;
+        }
+    </script>
+
+</body>
+</html>
+

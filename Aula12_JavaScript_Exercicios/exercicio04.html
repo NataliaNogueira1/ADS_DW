@@ -30,30 +30,29 @@
 
     <h1>Somando números até você digitar 0</h1>
     <label for="numero">Número:</label>
-        <input type="text" id="numero" placeholder="Digite um número"/><br><br>
+        <input type="number" id="numero" placeholder="Digite um número"/><br><br>
     
     <button onclick="contador()">Adicionar</button>
 
     <div id="resultado"></div>
 
     <script>
-    let soma = 0; 
-    function contador() {
-        const num = parseInt(document.getElementById("numero").value);
-        const resultado = document.getElementById("resultado");
+        let soma = 0; 
 
-        resultado.innerHTML = "";
+        function contador() {
+            const num = parseInt(document.getElementById("numero").value);
+            const resultado = document.getElementById("resultado");
 
-        do{
-            resultado.innerHTML = num;
+            resultado.innerHTML = "";
+
+            if (num === 0){
+                resultado.innerHTML = `Soma dos números: ${soma}`;
+                return;
+            }
+            
+            resultado.innerHTML = `Último número digitado: ` + num;
             soma = soma + num;
         }
-        while (num != 0) {
-            resultado.innerHTML = `Soma dos números: ${soma}`;
-            return;
-        }
-            
-    }
     </script>
 
 </body>

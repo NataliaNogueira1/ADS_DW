@@ -1,0 +1,53 @@
+<!-- 5. **Inverter uma string**
+    - Peça uma palavra e exiba ela invertida (ex: "casa" → "asac"). -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inversor</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Inversor de palavras</h1>
+    <label for="word">Palavra:</label>
+        <input type="text" id="word" placeholder="Digite uma palavra"/><br><br>
+    
+    <button onclick="inversor()">Inverter</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        function inversor() {
+            const word = document.getElementById("word").value;
+            const resultado = document.getElementById("resultado");
+
+            const inv = word.split("").reverse().join("");
+            resultado.innerHTML = inv;
+        }
+
+    </script>
+
+</body>
+</html>
+
