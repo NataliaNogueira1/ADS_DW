@@ -1,0 +1,56 @@
+<!-- 7. **Verificar se um número é primo**
+    - Peça um número e verifique se ele é primo (só divisível por 1 e ele mesmo). -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Número primo</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Descubra se o número é primo</h1>
+    <label for="primo">Número:</label>
+        <input type="number" id="primo" placeholder="Digite um número"/><br><br>
+    
+    <button onclick="primo()">Analisar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        function primo() {
+            const primo = parseInt(document.getElementById("primo").value);
+            const resultado = document.getElementById("resultado");
+
+            if (primo/2 != 0 && primo/3 != 0 && primo/5 != 0 && primo/7 != 0){
+                resultado.innerHTML = `${primo} é um número primo!`;
+            } else {
+                resultado.innerHTML = `${primo} não é um número primo!`;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+    
