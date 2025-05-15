@@ -1,0 +1,58 @@
+<!-- 9. **Contar vogais de uma palavra**
+    - Solicite uma palavra e conte quantas vogais ela possui. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de vogais</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Contador de vogais</h1>
+    <label for="palavra">Você quer saber quantas vogais tem em qual palavra?</label>
+        <input type="text" id="palavra" placeholder="Digite uma palavra"/><br><br>
+    
+    <button onclick="contador()">Analisar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        function contador() {
+            const palavra = document.getElementById("palavra").value;
+            const resultado = document.getElementById("resultado");
+            let vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+            var cont = Array.from(palavra).filter(char => vogais.includes(char)).length;
+
+            if (cont === 1) {
+                resultado.innerHTML = `A palavra tem ${cont} vogal.`;
+            }else{
+                resultado.innerHTML = `A palavra tem ${cont} vogais.`;
+            }
+
+        }
+    </script>
+
+</body>
+</html>    
