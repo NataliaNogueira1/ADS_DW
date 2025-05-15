@@ -41,12 +41,23 @@
         function primo() {
             const primo = parseInt(document.getElementById("primo").value);
             const resultado = document.getElementById("resultado");
-
-            if (primo/2 != 0 && primo/3 != 0 && primo/5 != 0 && primo/7 != 0){
-                resultado.innerHTML = `${primo} é um número primo!`;
-            } else {
-                resultado.innerHTML = `${primo} não é um número primo!`;
+            var num = 9;
+            for (var i = 2; i < num; i++){
+                if (num % i == 0){
+                    return false;
+                }else{
+                    return true;
+                }
             }
+
+            for (var j = 2; j < primo; j++){
+                if (primo(j)) {
+                    resultado.innerHTML = `${primo} é um número primo!`;
+                } else {
+                    resultado.innerHTML = `${primo} não é um número primo!`;
+                }
+            } 
+
         }
     </script>
 
