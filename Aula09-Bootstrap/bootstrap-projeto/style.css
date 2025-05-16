@@ -1,0 +1,13 @@
+@font-face {
+  font-family: myFont;
+  src: url(font/mont.otf);
+}
+.logoFonte {
+  font-family: myFont;
+}
+.text-blue {
+  color: #0a69ba;
+}
+.h-cal {
+  height: calc(30vh - var(--header-height));
+}
