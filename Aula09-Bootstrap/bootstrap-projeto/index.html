@@ -30,23 +30,8 @@
           <li class="nav-item">
             <a class="nav-link text-blue" href="#inicio">Início</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-blue"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Serviços</a
-            >
-            <div class="dropdown-menu text-blue">
-              <a class="dropdown-item" href="#web">one</a>
-              <a class="dropdown-item" href="#mobile">two</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#iot">three</a>
-              <a class="dropdown-item" href="#consultoria">three</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="#servicos">Serviços</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-blue" href="#equipe">Equipe</a>
@@ -72,69 +57,75 @@
       </div>
     </div>
 
-    <div id="servicos" class="container-fluid h-cal position-relative mt-2">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" id="web" href="#web"
-            >Web</a
+    <div id="servicos" class="container-fluid position-relative">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="web-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#web"
+            type="button"
+            role="tab"
           >
+            Web
+          </button>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" id="mobile" href="#mobile"
-            >Mobile</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" id="iot" href="#iot">IoT</a>
-        </li>
-        <li class="nav-item">
-          <a
+        <li class="nav-item" role="presentation">
+          <button
             class="nav-link"
-            aria-current="page"
-            id="consultoria"
-            href="#consultoria"
-            >Consultoria</a
+            id="mobile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#mobile"
+            type="button"
+            role="tab"
           >
+            Mobile
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="iot-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#iot"
+            type="button"
+            role="tab"
+          >
+            IoT
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="consultoria-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#consultoria"
+            type="button"
+            role="tab"
+          >
+            Consultoria
+          </button>
         </li>
       </ul>
+    </div>
 
-      <div class="tab-content" id="ex1-content">
-        <div
-          class="tab-pane fade show active"
-          id="web"
-          role="tabpanel"
-          aria-labelledby="ex1-tab-1"
-        >
-          Tab 1 content
-        </div>
-        <div
-          class="tab-pane fade"
-          id="mobile"
-          role="tabpanel"
-          aria-labelledby="ex1-tab-2"
-        >
-          Tab 2 content
-        </div>
-        <div
-          class="tab-pane fade"
-          id="iot"
-          role="tabpanel"
-          aria-labelledby="ex1-tab-3"
-        >
-          Tab 3 content
-        </div>
-        <div
-          class="tab-pane fade"
-          id="consultoria"
-          role="tabpanel"
-          aria-labelledby="ex1-tab-3"
-        >
-          Tab 4 content
-        </div>
+    <div class="tab-content mt-3">
+      <div class="tab-pane fade show active" id="web" role="tabpanel">
+        <p>I'm the first tab</p>
+      </div>
+      <div class="tab-pane fade" id="mobile" role="tabpanel">
+        <p>I'm the second tab</p>
+      </div>
+      <div class="tab-pane fade" id="iot" role="tabpanel">
+        <p>I'm the third tab</p>
+      </div>
+      <div class="tab-pane fade" id="consultoria" role="tabpanel">
+        <p>I'm a disabled tab!</p>
       </div>
     </div>
 
-    <container>
+    <div class="container">
       <form class="mx-5 my-5 border border-warning rounded bg-white">
         <div class="my-3 px-5">
           <h3 class="mt-4 text-dark">
@@ -185,7 +176,7 @@
           </button>
         </div>
       </form>
-    </container>
+    </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">
