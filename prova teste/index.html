@@ -64,11 +64,12 @@
               <a class="nav-link blue-700">Contato</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" onsubmit="filtroNome()">
             <input
               class="form-control me-2"
               type="search"
               placeholder="Search"
+              id="input"
               aria-label="Search"
             />
             <button class="btn btn-outline-success" type="submit">
